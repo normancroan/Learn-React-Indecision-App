@@ -1,5 +1,16 @@
-var template = <h1>Live realoding the entire directory baby</h1>;
+const user = {
+    name: 'Norman',
+    age: 'Old',
+    location: 'Goffstown'
+}
 
-var appRoot = document.getElementById('app')
+const app = 
+    <div>
+        {user.name ?
+            <h1>{user.name}</h1> 
+            : <h3>Not sure who that user is.</h3>}
+    </div>
 
-ReactDOM.render(template, appRoot);
+const appRoot = document.getElementById('app')
+
+ReactDOM.render(app, appRoot);
