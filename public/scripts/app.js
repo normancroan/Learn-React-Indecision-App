@@ -9,14 +9,27 @@ var user = {
 var app = React.createElement(
     'div',
     null,
-    user.name ? React.createElement(
-        'h1',
+    React.createElement(
+        'div',
         null,
-        user.name
-    ) : React.createElement(
-        'h3',
+        user.name ? React.createElement(
+            'h1',
+            null,
+            user.name
+        ) : React.createElement(
+            'h3',
+            null,
+            'Not sure who that user is.'
+        )
+    ),
+    React.createElement(
+        'div',
         null,
-        'Not sure who that user is.'
+        user.location && React.createElement(
+            'p',
+            null,
+            user.location
+        )
     )
 );
 

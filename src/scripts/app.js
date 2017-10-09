@@ -6,9 +6,14 @@ const user = {
 
 const app = 
     <div>
+        <div>
         {user.name ?
             <h1>{user.name}</h1> 
             : <h3>Not sure who that user is.</h3>}
+        </div>
+        <div>
+        {user.location && <p>{user.location}</p>}
+        </div>
     </div>
 
 const appRoot = document.getElementById('app')
