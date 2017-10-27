@@ -6,33 +6,7 @@ var user = {
     location: 'Goffstown'
 };
 
-var app = React.createElement(
-    'div',
-    null,
-    React.createElement(
-        'div',
-        null,
-        user.name ? React.createElement(
-            'h1',
-            null,
-            user.name
-        ) : React.createElement(
-            'h3',
-            null,
-            'Not sure who that user is.'
-        )
-    ),
-    React.createElement(
-        'div',
-        null,
-        user.location && React.createElement(
-            'p',
-            null,
-            'Lives in: ',
-            user.location
-        )
-    )
-);
+var app = React.createElement('div', null);
 
 var appRoot = document.getElementById('app');
 ReactDOM.render(app, appRoot);
