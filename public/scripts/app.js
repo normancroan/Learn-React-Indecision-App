@@ -34,6 +34,50 @@ var app = React.createElement(
     )
 );
 
+var count = 0;
+
+var increment = function increment() {
+    count++;
+    renderCounterApp();
+};
+var decrement = function decrement() {
+    count--;
+    renderCounterApp();
+};
+var reset = function reset() {
+    count = 0;
+    renderCounterApp();
+};
+
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(app, appRoot);
+var renderCounterApp = function renderCounterApp() {
+    var counter = React.createElement(
+        'div',
+        null,
+        React.createElement(
+            'h1',
+            null,
+            'Count: ',
+            count
+        ),
+        React.createElement(
+            'button',
+            { onClick: increment },
+            '+1'
+        ),
+        React.createElement(
+            'button',
+            { onClick: decrement },
+            '-1'
+        ),
+        React.createElement(
+            'button',
+            { onClick: reset },
+            'Reset'
+        )
+    );
+    ReactDOM.render(counter, appRoot);
+};
+
+renderCounterApp();
