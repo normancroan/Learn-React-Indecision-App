@@ -28,6 +28,7 @@ var app = React.createElement(
         user.location && React.createElement(
             'p',
             null,
+            'Lives in: ',
             user.location
         )
     )
