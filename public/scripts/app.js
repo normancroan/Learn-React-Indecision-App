@@ -105,16 +105,20 @@ var Action = function (_React$Component3) {
 var Options = function (_React$Component4) {
     _inherits(Options, _React$Component4);
 
-    function Options() {
+    function Options(props) {
         _classCallCheck(this, Options);
 
-        return _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).apply(this, arguments));
+        //required when overriding constructor
+        var _this4 = _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).call(this, props));
+
+        _this4.handleRemoveAll = _this4.handleRemoveAll.bind(_this4); //ensuring the context of handleRemoveAll is this
+        return _this4;
     }
 
     _createClass(Options, [{
         key: "handleRemoveAll",
         value: function handleRemoveAll() {
-            alert("Fired handleRemoveAll");
+            console.log(this.props.options);
         }
     }, {
         key: "render",

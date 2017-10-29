@@ -40,8 +40,12 @@ class Action extends React.Component {
 }
 
 class Options extends React.Component {
+    constructor(props){
+        super(props) //required when overriding constructor
+        this.handleRemoveAll = this.handleRemoveAll.bind(this) //ensuring the context of handleRemoveAll is this
+    }
     handleRemoveAll(){
-        alert("Fired handleRemoveAll")
+        console.log(this.props.options)
     }
     render() {
         return (
