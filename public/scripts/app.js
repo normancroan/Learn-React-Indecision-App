@@ -42,9 +42,7 @@ var IndecisionApp = function (_React$Component) {
             }
 
             this.setState(function (prevState) {
-                return {
-                    options: prevState.options.concat(option)
-                };
+                return { options: prevState.options.concat(option) };
             });
         }
     }, {
@@ -161,9 +159,7 @@ var AddOptions = function (_React$Component2) {
             var error = this.props.handleAddOption(option);
 
             this.setState(function () {
-                return {
-                    error: error
-                };
+                return { error: error };
             });
         }
     }, {
