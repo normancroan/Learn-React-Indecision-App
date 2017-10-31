@@ -9,6 +9,17 @@ class Counter extends React.Component {
             name: 'Norman'
         }
     }
+    componentDidMount(){
+        const count = parseInt(localStorage.getItem('count'), 10)
+        if(!isNaN(count)){
+            this.setState(() => ({count}))
+        }
+    }
+    componentDidUpdate(prevProps, prevState){
+        if (prevState.count !== this.state.count){
+            localStorage.setItem('count', this.state.count)
+        }
+    }
     handleIncrement(){
         this.setState((prevState) => {
             return {
