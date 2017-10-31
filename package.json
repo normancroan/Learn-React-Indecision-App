@@ -16,7 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d public",
     "build-with-reload": "babel src -d public --watch",
-    "build-playground": "babel playground/visibility.js --out-file=public/scripts/app.js --watch"
+    "build-playground": "babel playground/counter.js --out-file=public/scripts/app.js --watch"
   },
   "author": "Norman Croan",
   "license": "ISC"
