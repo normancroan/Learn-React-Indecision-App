@@ -16,7 +16,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "live-server public/",
-    "build": "babel src -d public",
+    "build": "webpack",
     "build-with-reload": "babel src -d public --presets=env,react --watch",
     "build-playground": "babel playground/counter.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
