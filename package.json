@@ -5,7 +5,10 @@
   "main": "index.js",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0"
+    "babel-preset-env": "^1.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^3.8.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -16,9 +19,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "live-server public/",
-    "build": "webpack",
+    "build": "webpack --watch",
     "build-with-reload": "babel src -d public --presets=env,react --watch",
-    "build-playground": "babel playground/counter.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    "build-playground": "babel src/playground/counter.js --out-file=public/scripts/app.js --presets=env,react --watch"
   },
   "author": "Norman Croan",
   "license": "ISC"
