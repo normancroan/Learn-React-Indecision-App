@@ -1,7 +1,13 @@
-import roar, { add, subtract, square } from './utils'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-console.log('app.js is running')
-
-console.log(add(2,3))
-
-console.log(roar('RAWWRWRWRWR'))
+class Hello extends React.Component {
+    render() {
+      return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+    }
+  }
+  
+ReactDOM.render(
+    React.createElement(Hello, {toWhat: 'World'}, null),
+    document.getElementById('app')
+  );
