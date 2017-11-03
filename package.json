@@ -12,14 +12,14 @@
     "live-server": "^1.2.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "webpack": "^3.8.1"
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "live-server public/",
-    "build": "webpack --watch",
-    "build-with-reload": "babel src -d public --presets=env,react --watch",
-    "build-playground": "babel src/playground/counter.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
   },
   "author": "Norman Croan",
   "license": "ISC"
