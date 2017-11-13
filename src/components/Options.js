@@ -12,9 +12,7 @@ const Options = (props) => (
                 Remove All</button>
         </div>
         {props.options.length === 0 && <p className="widget-message">Go ahead, add a few options to get started.</p>}
-        <ol>
-            {props.options.map(option =>  <Option option={option} handleDeleteOption={props.handleDeleteOption}/>)}
-        </ol>
+        {props.options.map((option, index) =>  <Option count={index +1} option={option} handleDeleteOption={props.handleDeleteOption}/>)}
     </div>
 )
 
