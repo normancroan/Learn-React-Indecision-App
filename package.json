@@ -26,8 +26,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "live-server public/",
     "build": "webpack",
+    "build-prod": "webpack --env production",
     "dev-server": "webpack-dev-server"
   },
   "author": "Norman Croan",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^1.0.1"
+  }
 }
